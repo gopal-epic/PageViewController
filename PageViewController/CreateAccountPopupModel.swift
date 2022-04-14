@@ -36,6 +36,12 @@ enum CreateAccountPopupModel: CaseIterable {
     static func title() -> String {
         return Self.isIphone() ? NSLocalizedString("create_account_popup_title_iPhone", tableName: "Account", bundle: .main, value: "Create an account to\nfollow their journey!", comment: "Message displayed to ask user if they like to create account for their child") : NSLocalizedString("create_account_popup_title", tableName: "Account", bundle: .main, value: "Create an account\nto follow their journey!", comment: "Message displayed to ask user if they like to create account for their child")
     }
+    
+    enum ImageAssetType {
+        case png
+        case pdf
+        case svg
+    }
 
     func backgroundImage(usePDFImage: Bool) -> UIImage? {
         return Self.backgroundImage(for: self, usePDFImage: usePDFImage)

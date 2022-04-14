@@ -17,6 +17,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     @IBOutlet weak var pageControl: UIPageControl?
     @IBOutlet weak var createAccountButton: UIButton?
     @IBOutlet weak var alreadyHaveAnAccountButton: UIButton?
+    @IBOutlet weak var useSVGAssetsButton: UIButton?
 
     private var pageViewController: UIPageViewController?
     private var pages: [CreateAccountPopupModel] = CreateAccountPopupModel.getPages()
@@ -46,6 +47,12 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
         alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
+    
+    @IBAction func useSVGAssetsButtonAction(_ sender: UIButton) {
+        usePDFImage = false
+        createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
+        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +76,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         pageControl?.currentPage = currentPage?.index ?? currentIndex
         createAccountButton?.setTitle("Use PDF Images", for: .normal)
         alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
+        useSVGAssetsButton?.setTitle("Use SVG Images", for: .normal)
         
         alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
