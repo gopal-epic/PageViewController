@@ -30,28 +30,31 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     }
     private let source = "value_prop_popup"
     static let keyCreateAccountPopupShownDate = "keyCreateAccountPopupShownDate"
-    var usePDFImage = false
+    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .png
 
     @IBAction func closeOrBackButtonAction(_ sender: UIButton) {
         
     }
 
     @IBAction func createAccountButtonAction(_ sender: UIButton) {
-        usePDFImage = true
+        imageAssetType = .pdf
+        useSVGAssetsButton?.setTitleColor(UIColor.blue, for: .normal)
         alreadyHaveAnAccountButton?.setTitleColor(UIColor.blue, for: .normal)
         createAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
 
     @IBAction func alreadyHaveAnAccountButtonAction(_ sender: UIButton) {
-        usePDFImage = false
+        imageAssetType = .png
+        useSVGAssetsButton?.setTitleColor(UIColor.blue, for: .normal)
         createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
         alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
     
     @IBAction func useSVGAssetsButtonAction(_ sender: UIButton) {
-        usePDFImage = false
+        imageAssetType = .svg
+        useSVGAssetsButton?.setTitleColor(UIColor.gray, for: .normal)
         createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
-        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
+        alreadyHaveAnAccountButton?.setTitleColor(UIColor.blue, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -120,7 +123,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         pageViewController.view.frame = view.frame
         contentView.insertSubview(pageViewController.view, belowSubview: stackView) // for passing user touches to bottom view
 
-        let initialVC = CreateAccountPageViewController(with: currentPage, usePDFImage: usePDFImage)
+        let initialVC = CreateAccountPageViewController(with: currentPage, imageAssetType: imageAssetType)
         pageViewController.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
     }
 
@@ -155,7 +158,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         currentPage = pages[index]
         guard let currentPage = currentPage else { return nil }
         
-        return CreateAccountPageViewController(with: currentPage, usePDFImage: usePDFImage)
+        return CreateAccountPageViewController(with: currentPage, imageAssetType: imageAssetType)
     }
 }
 

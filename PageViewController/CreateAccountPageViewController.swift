@@ -14,11 +14,11 @@ class CreateAccountPageViewController: UIViewController {
     @IBOutlet weak var imageLabelStackView: UIStackView?
 
     var page: CreateAccountPopupModel
-    var usePDFImage: Bool
+    var imageAssetType: CreateAccountPopupModel.ImageAssetType
 
-    init(with page: CreateAccountPopupModel, usePDFImage: Bool) {
+    init(with page: CreateAccountPopupModel, imageAssetType: CreateAccountPopupModel.ImageAssetType) {
         self.page = page
-        self.usePDFImage = usePDFImage
+        self.imageAssetType = imageAssetType
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -44,11 +44,11 @@ class CreateAccountPageViewController: UIViewController {
         else { return }
 
         if CreateAccountPopupModel.isIphone() {
-            imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, usePDFImage: usePDFImage)
+            imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, imageAssetType: imageAssetType)
         } else {
             let allPages: [CreateAccountPopupModel] = [.pageZero, .pageOne, .pageTwo]
             for page in allPages {
-                imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, usePDFImage: usePDFImage)
+                imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, imageAssetType: imageAssetType)
             }
         }
     }
@@ -56,9 +56,9 @@ class CreateAccountPageViewController: UIViewController {
 }
 
 extension UIStackView {
-    func addEpicImageLabelViewAsArrangedSubView(for page: CreateAccountPopupModel, usePDFImage: Bool) {
+    func addEpicImageLabelViewAsArrangedSubView(for page: CreateAccountPopupModel, imageAssetType: CreateAccountPopupModel.ImageAssetType) {
         let epicImageLabelStackViewFrame: CGRect = CreateAccountPopupModel.isIphone() ? self.frame : CGRect(origin: self.frame.origin, size: CGSize(width: 220, height: 275))
-        let epicImageLabelStackView = EpicImageLabelStackView.createEpicImageLabelStackView(frame: epicImageLabelStackViewFrame, image: page.backgroundImage(usePDFImage: usePDFImage), text: page.subTitle())
+        let epicImageLabelStackView = EpicImageLabelStackView.createEpicImageLabelStackView(frame: epicImageLabelStackViewFrame, image: page.backgroundImage(imageAssetType: imageAssetType), text: page.subTitle())
         epicImageLabelStackView.label?.textAlignment = .center
         self.addArrangedSubview(epicImageLabelStackView)
     }

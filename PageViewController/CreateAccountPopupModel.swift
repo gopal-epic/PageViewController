@@ -37,17 +37,17 @@ enum CreateAccountPopupModel: CaseIterable {
         return Self.isIphone() ? NSLocalizedString("create_account_popup_title_iPhone", tableName: "Account", bundle: .main, value: "Create an account to\nfollow their journey!", comment: "Message displayed to ask user if they like to create account for their child") : NSLocalizedString("create_account_popup_title", tableName: "Account", bundle: .main, value: "Create an account\nto follow their journey!", comment: "Message displayed to ask user if they like to create account for their child")
     }
     
-    enum ImageAssetType {
-        case png
-        case pdf
-        case svg
+    enum ImageAssetType: String {
+        case png = ""
+        case pdf = "_Pdf"
+        case svg = "_Svg"
     }
 
-    func backgroundImage(usePDFImage: Bool) -> UIImage? {
-        return Self.backgroundImage(for: self, usePDFImage: usePDFImage)
+    func backgroundImage(imageAssetType: ImageAssetType) -> UIImage? {
+        return Self.backgroundImage(for: self, imageAssetType: imageAssetType)
     }
 
-    static func backgroundImage(for page: CreateAccountPopupModel, usePDFImage: Bool) -> UIImage? {
+    static func backgroundImage(for page: CreateAccountPopupModel, imageAssetType: ImageAssetType) -> UIImage? {
         var imageName: String = ""
         
         switch page {
@@ -59,8 +59,8 @@ enum CreateAccountPopupModel: CaseIterable {
             imageName = Self.isIphone() ? "noAccount_Purple_iPhone" : "noAccount_Purple"
         }
         
-        if Self.isIphone() && usePDFImage {
-            imageName = imageName + "_Pdf"
+        if Self.isIphone() {
+            imageName = imageName + imageAssetType.rawValue
         }
         
         guard !imageName.isEmpty
