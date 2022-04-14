@@ -37,10 +37,14 @@ class CreateAccountPopupViewController: ScrollFormViewController {
 
     @IBAction func createAccountButtonAction(_ sender: UIButton) {
         usePDFImage = true
+        alreadyHaveAnAccountButton?.setTitleColor(UIColor.blue, for: .normal)
+        createAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
 
     @IBAction func alreadyHaveAnAccountButtonAction(_ sender: UIButton) {
         usePDFImage = false
+        createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
+        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -65,6 +69,8 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         pageControl?.currentPage = currentPage?.index ?? currentIndex
         createAccountButton?.setTitle("Use PDF Images", for: .normal)
         alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
+        
+        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
     }
 
     override func viewWillAppear(_ animated: Bool) {
