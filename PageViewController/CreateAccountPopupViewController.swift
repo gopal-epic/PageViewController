@@ -29,19 +29,18 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     }
     private let source = "value_prop_popup"
     static let keyCreateAccountPopupShownDate = "keyCreateAccountPopupShownDate"
+    var usePDFImage = false
 
     @IBAction func closeOrBackButtonAction(_ sender: UIButton) {
-        dismiss(animated: true)
+        
     }
 
     @IBAction func createAccountButtonAction(_ sender: UIButton) {
-        dismiss(animated: true) {
-            
-        }
+        usePDFImage = true
     }
 
     @IBAction func alreadyHaveAnAccountButtonAction(_ sender: UIButton) {
-        dismiss(animated: true)
+        usePDFImage = false
     }
 
     override func viewDidLoad() {
@@ -64,8 +63,8 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         pageControl?.hidesForSinglePage = true
         
         pageControl?.currentPage = currentPage?.index ?? currentIndex
-        createAccountButton?.setTitle("Create Account", for: .normal)
-        alreadyHaveAnAccountButton?.setTitle("Already Have an Account", for: .normal)
+        createAccountButton?.setTitle("Use PDF Images", for: .normal)
+        alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -107,7 +106,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         pageViewController.view.frame = view.frame
         contentView.insertSubview(pageViewController.view, belowSubview: stackView) // for passing user touches to bottom view
 
-        let initialVC = CreateAccountPageViewController(with: currentPage)
+        let initialVC = CreateAccountPageViewController(with: currentPage, usePDFImage: usePDFImage)
         pageViewController.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
     }
 
@@ -142,7 +141,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         currentPage = pages[index]
         guard let currentPage = currentPage else { return nil }
         
-        return CreateAccountPageViewController(with: currentPage)
+        return CreateAccountPageViewController(with: currentPage, usePDFImage: usePDFImage)
     }
 }
 

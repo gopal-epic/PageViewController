@@ -37,19 +37,30 @@ enum CreateAccountPopupModel: CaseIterable {
         return Self.isIphone() ? NSLocalizedString("create_account_popup_title_iPhone", tableName: "Account", bundle: .main, value: "Create an account to\nfollow their journey!", comment: "Message displayed to ask user if they like to create account for their child") : NSLocalizedString("create_account_popup_title", tableName: "Account", bundle: .main, value: "Create an account\nto follow their journey!", comment: "Message displayed to ask user if they like to create account for their child")
     }
 
-    func backgroundImage() -> UIImage? {
-        return Self.backgroundImage(for: self)
+    func backgroundImage(usePDFImage: Bool) -> UIImage? {
+        return Self.backgroundImage(for: self, usePDFImage: usePDFImage)
     }
 
-    static func backgroundImage(for page: CreateAccountPopupModel) -> UIImage? {
+    static func backgroundImage(for page: CreateAccountPopupModel, usePDFImage: Bool) -> UIImage? {
+        var imageName: String = ""
+        
         switch page {
         case .pageZero:
-            return UIImage(named: Self.isIphone() ? "noAccount_Green_iPhone" : "noAccount_Green")
+            imageName = Self.isIphone() ? "noAccount_Green_iPhone" : "noAccount_Green"
         case .pageOne:
-            return UIImage(named: Self.isIphone() ? "noAccount_Pink_iPhone" : "noAccount_Pink")
+            imageName = Self.isIphone() ? "noAccount_Pink_iPhone" : "noAccount_Pink"
         case .pageTwo:
-            return UIImage(named: Self.isIphone() ? "noAccount_Purple_iPhone" : "noAccount_Purple")
+            imageName = Self.isIphone() ? "noAccount_Purple_iPhone" : "noAccount_Purple"
         }
+        
+        if Self.isIphone() && usePDFImage {
+            imageName = imageName + "_Pdf"
+        }
+        
+        guard !imageName.isEmpty
+        else { return nil }
+        
+        return UIImage(named: imageName)
     }
 
     func subTitle() -> String {

@@ -14,9 +14,11 @@ class CreateAccountPageViewController: UIViewController {
     @IBOutlet weak var imageLabelStackView: UIStackView?
 
     var page: CreateAccountPopupModel
+    var usePDFImage: Bool
 
-    init(with page: CreateAccountPopupModel) {
+    init(with page: CreateAccountPopupModel, usePDFImage: Bool) {
         self.page = page
+        self.usePDFImage = usePDFImage
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -42,11 +44,11 @@ class CreateAccountPageViewController: UIViewController {
         else { return }
 
         if CreateAccountPopupModel.isIphone() {
-            imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page)
+            imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, usePDFImage: usePDFImage)
         } else {
             let allPages: [CreateAccountPopupModel] = [.pageZero, .pageOne, .pageTwo]
             for page in allPages {
-                imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page)
+                imageLabelStackView.addEpicImageLabelViewAsArrangedSubView(for: page, usePDFImage: usePDFImage)
             }
         }
     }
@@ -54,9 +56,9 @@ class CreateAccountPageViewController: UIViewController {
 }
 
 extension UIStackView {
-    func addEpicImageLabelViewAsArrangedSubView(for page: CreateAccountPopupModel) {
+    func addEpicImageLabelViewAsArrangedSubView(for page: CreateAccountPopupModel, usePDFImage: Bool) {
         let epicImageLabelStackViewFrame: CGRect = CreateAccountPopupModel.isIphone() ? self.frame : CGRect(origin: self.frame.origin, size: CGSize(width: 220, height: 275))
-        let epicImageLabelStackView = EpicImageLabelStackView.createEpicImageLabelStackView(frame: epicImageLabelStackViewFrame, image: page.backgroundImage(), text: page.subTitle())
+        let epicImageLabelStackView = EpicImageLabelStackView.createEpicImageLabelStackView(frame: epicImageLabelStackViewFrame, image: page.backgroundImage(usePDFImage: usePDFImage), text: page.subTitle())
         epicImageLabelStackView.label?.textAlignment = .center
         self.addArrangedSubview(epicImageLabelStackView)
     }
