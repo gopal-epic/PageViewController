@@ -17,6 +17,16 @@
 		4B7130BC2808C568004E52A4 /* PageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130BB2808C568004E52A4 /* PageViewControllerTests.swift */; };
 		4B7130C62808C568004E52A4 /* PageViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130C52808C568004E52A4 /* PageViewControllerUITests.swift */; };
 		4B7130C82808C568004E52A4 /* PageViewControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130C72808C568004E52A4 /* PageViewControllerUITestsLaunchTests.swift */; };
+		4B7130D52808C5DB004E52A4 /* CreateAccountPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130D42808C5DB004E52A4 /* CreateAccountPopupModel.swift */; };
+		4B7130DA2808C5F2004E52A4 /* CreateAccountPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7130D62808C5F2004E52A4 /* CreateAccountPageViewController.xib */; };
+		4B7130DB2808C5F2004E52A4 /* CreateAccountPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7130D72808C5F2004E52A4 /* CreateAccountPopupViewController.xib */; };
+		4B7130DC2808C5F2004E52A4 /* CreateAccountPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130D82808C5F2004E52A4 /* CreateAccountPopupViewController.swift */; };
+		4B7130DD2808C5F2004E52A4 /* CreateAccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130D92808C5F2004E52A4 /* CreateAccountPageViewController.swift */; };
+		4B7130E02808C756004E52A4 /* EpicImageLabelStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130DE2808C756004E52A4 /* EpicImageLabelStackView.swift */; };
+		4B7130E12808C756004E52A4 /* EpicImageLabelStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7130DF2808C756004E52A4 /* EpicImageLabelStackView.xib */; };
+		4B7130E32808C85A004E52A4 /* EpicTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130E22808C85A004E52A4 /* EpicTimerModel.swift */; };
+		4B7130E52808C88C004E52A4 /* ScrollFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130E42808C88C004E52A4 /* ScrollFormViewController.swift */; };
+		4B7130ED2808CCAE004E52A4 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7130EC2808CCAE004E52A4 /* ExtensionUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,16 @@
 		4B7130C12808C568004E52A4 /* PageViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7130C52808C568004E52A4 /* PageViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerUITests.swift; sourceTree = "<group>"; };
 		4B7130C72808C568004E52A4 /* PageViewControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B7130D42808C5DB004E52A4 /* CreateAccountPopupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountPopupModel.swift; sourceTree = "<group>"; };
+		4B7130D62808C5F2004E52A4 /* CreateAccountPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountPageViewController.xib; sourceTree = "<group>"; };
+		4B7130D72808C5F2004E52A4 /* CreateAccountPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountPopupViewController.xib; sourceTree = "<group>"; };
+		4B7130D82808C5F2004E52A4 /* CreateAccountPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountPopupViewController.swift; sourceTree = "<group>"; };
+		4B7130D92808C5F2004E52A4 /* CreateAccountPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountPageViewController.swift; sourceTree = "<group>"; };
+		4B7130DE2808C756004E52A4 /* EpicImageLabelStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicImageLabelStackView.swift; sourceTree = "<group>"; };
+		4B7130DF2808C756004E52A4 /* EpicImageLabelStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpicImageLabelStackView.xib; sourceTree = "<group>"; };
+		4B7130E22808C85A004E52A4 /* EpicTimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicTimerModel.swift; sourceTree = "<group>"; };
+		4B7130E42808C88C004E52A4 /* ScrollFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollFormViewController.swift; sourceTree = "<group>"; };
+		4B7130EC2808CCAE004E52A4 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +123,22 @@
 			children = (
 				4B7130A12808C565004E52A4 /* AppDelegate.swift */,
 				4B7130A32808C565004E52A4 /* SceneDelegate.swift */,
+				4B7130E22808C85A004E52A4 /* EpicTimerModel.swift */,
+				4B7130DE2808C756004E52A4 /* EpicImageLabelStackView.swift */,
+				4B7130DF2808C756004E52A4 /* EpicImageLabelStackView.xib */,
+				4B7130D42808C5DB004E52A4 /* CreateAccountPopupModel.swift */,
+				4B7130D92808C5F2004E52A4 /* CreateAccountPageViewController.swift */,
+				4B7130D62808C5F2004E52A4 /* CreateAccountPageViewController.xib */,
+				4B7130D82808C5F2004E52A4 /* CreateAccountPopupViewController.swift */,
+				4B7130D72808C5F2004E52A4 /* CreateAccountPopupViewController.xib */,
+				4B7130E42808C88C004E52A4 /* ScrollFormViewController.swift */,
 				4B7130A52808C565004E52A4 /* ViewController.swift */,
 				4B7130A72808C565004E52A4 /* Main.storyboard */,
 				4B7130AD2808C568004E52A4 /* Assets.xcassets */,
 				4B7130AF2808C568004E52A4 /* LaunchScreen.storyboard */,
 				4B7130B22808C568004E52A4 /* Info.plist */,
 				4B7130AA2808C565004E52A4 /* PageViewController.xcdatamodeld */,
+				4B7130EC2808CCAE004E52A4 /* ExtensionUIView.swift */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -234,9 +264,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7130DB2808C5F2004E52A4 /* CreateAccountPopupViewController.xib in Resources */,
 				4B7130B12808C568004E52A4 /* LaunchScreen.storyboard in Resources */,
+				4B7130DA2808C5F2004E52A4 /* CreateAccountPageViewController.xib in Resources */,
 				4B7130AE2808C568004E52A4 /* Assets.xcassets in Resources */,
 				4B7130A92808C565004E52A4 /* Main.storyboard in Resources */,
+				4B7130E12808C756004E52A4 /* EpicImageLabelStackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7130A62808C565004E52A4 /* ViewController.swift in Sources */,
+				4B7130E52808C88C004E52A4 /* ScrollFormViewController.swift in Sources */,
 				4B7130A22808C565004E52A4 /* AppDelegate.swift in Sources */,
 				4B7130A42808C565004E52A4 /* SceneDelegate.swift in Sources */,
+				4B7130DC2808C5F2004E52A4 /* CreateAccountPopupViewController.swift in Sources */,
+				4B7130D52808C5DB004E52A4 /* CreateAccountPopupModel.swift in Sources */,
+				4B7130ED2808CCAE004E52A4 /* ExtensionUIView.swift in Sources */,
+				4B7130E02808C756004E52A4 /* EpicImageLabelStackView.swift in Sources */,
 				4B7130AC2808C565004E52A4 /* PageViewController.xcdatamodeld in Sources */,
+				4B7130E32808C85A004E52A4 /* EpicTimerModel.swift in Sources */,
+				4B7130DD2808C5F2004E52A4 /* CreateAccountPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

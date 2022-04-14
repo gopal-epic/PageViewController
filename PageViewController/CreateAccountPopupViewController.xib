@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountPopupViewController" customModule="PageViewController" customModuleProvider="target">
+            <connections>
+                <outlet property="alreadyHaveAnAccountButton" destination="snv-DO-wDS" id="O1s-x8-Nse"/>
+                <outlet property="backButton" destination="FAF-hw-6nA" id="8YX-iv-HEb"/>
+                <outlet property="closeButton" destination="N5F-q0-NV2" id="ovJ-He-U2F"/>
+                <outlet property="contentView" destination="tFD-bL-CNR" id="Dwy-Sh-5jx"/>
+                <outlet property="createAccountButton" destination="rj0-FQ-beI" id="dO4-Em-RPr"/>
+                <outlet property="pageControl" destination="0x7-qt-ejS" id="pFF-bX-wXi"/>
+                <outlet property="scrollView" destination="UcM-nP-MHn" id="iQd-G2-OPL"/>
+                <outlet property="stackView" destination="vFc-UI-Ns8" id="nla-0Z-dsU"/>
+                <outlet property="view" destination="4TP-EO-YYC" id="dSh-HK-FgW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4TP-EO-YYC">
+            <rect key="frame" x="0.0" y="0.0" width="760" height="566"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-nP-MHn">
+                    <rect key="frame" x="0.0" y="0.0" width="760" height="566"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFD-bL-CNR" userLabel="Content View" customClass="EpicView" customModule="EpicComponents">
+                            <rect key="frame" x="0.0" y="0.0" width="760" height="588"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vFc-UI-Ns8">
+                                    <rect key="frame" x="322.5" y="432" width="115.5" height="124"/>
+                                    <subviews>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-qt-ejS">
+                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="K4U-FF-vP9">
+                                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                </constraint>
+                                                <constraint firstAttribute="height" constant="27.5" id="bEV-4e-Sne"/>
+                                            </constraints>
+                                            <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" hidden="YES">
+                                                <mask key="constraints">
+                                                    <exclude reference="K4U-FF-vP9"/>
+                                                    <exclude reference="bEV-4e-Sne"/>
+                                                </mask>
+                                            </variation>
+                                        </pageControl>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj0-FQ-beI">
+                                            <rect key="frame" x="0.0" y="0.0" width="115.5" height="58"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="58" id="T1r-nb-5XM"/>
+                                            </constraints>
+                                            <state key="normal" title="..."/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleSizeString" value="extralarge"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleString" value="primary"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="createAccountButtonAction:" destination="-1" eventType="touchUpInside" id="J6v-tN-zpZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snv-DO-wDS">
+                                            <rect key="frame" x="0.0" y="66" width="115.5" height="58"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="58" id="NTL-gN-3Y4"/>
+                                            </constraints>
+                                            <state key="normal" title="..."/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleSizeString" value="extralarge"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleString" value="textlink"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="alreadyHaveAnAccountButtonAction:" destination="-1" eventType="touchUpInside" id="U1m-fk-oIr"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="ManageSubscriptionViewController" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-hw-6nA">
+                                    <rect key="frame" x="8" y="52" width="68" height="68"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="68" id="KQh-Fd-odI">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                        </constraint>
+                                        <constraint firstAttribute="height" constant="68" id="yup-fM-zKx">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                        </constraint>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="nav_btn_back"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleString" value="image"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <variation key="heightClass=regular-widthClass=regular" hidden="YES"/>
+                                    <connections>
+                                        <action selector="closeOrBackButtonAction:" destination="-1" eventType="touchUpInside" id="aXw-jv-fHi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-q0-NV2" userLabel="Close">
+                                    <rect key="frame" x="706" y="16" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="LX5-Ws-OKK"/>
+                                        <constraint firstAttribute="height" constant="32" id="mIL-C4-6KC"/>
+                                    </constraints>
+                                    <state key="normal" image="close"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAddTintColor" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                    <connections>
+                                        <action selector="closeOrBackButtonAction:" destination="-1" eventType="touchUpInside" id="rQs-8F-jKB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vFc-UI-Ns8" secondAttribute="bottom" constant="32" id="2JQ-dX-zBn"/>
+                                <constraint firstItem="vFc-UI-Ns8" firstAttribute="top" secondItem="tFD-bL-CNR" secondAttribute="top" constant="600" id="ImY-QH-gn3">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="432"/>
+                                </constraint>
+                                <constraint firstItem="FAF-hw-6nA" firstAttribute="leading" secondItem="tFD-bL-CNR" secondAttribute="leading" constant="8" id="OkK-Ao-5Vf"/>
+                                <constraint firstItem="FAF-hw-6nA" firstAttribute="top" secondItem="tFD-bL-CNR" secondAttribute="top" constant="52" id="TWq-w6-gXS"/>
+                                <constraint firstItem="vFc-UI-Ns8" firstAttribute="centerX" secondItem="tFD-bL-CNR" secondAttribute="centerX" id="Tuq-sX-Zxo"/>
+                                <constraint firstAttribute="trailing" secondItem="N5F-q0-NV2" secondAttribute="trailing" constant="22" id="ZQR-K3-cVo"/>
+                                <constraint firstItem="N5F-q0-NV2" firstAttribute="top" secondItem="tFD-bL-CNR" secondAttribute="top" constant="16" id="w6F-Z8-Ayu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="tFD-bL-CNR" firstAttribute="leading" secondItem="UcM-nP-MHn" secondAttribute="leading" id="O4m-KV-0xa"/>
+                        <constraint firstItem="tFD-bL-CNR" firstAttribute="top" secondItem="UcM-nP-MHn" secondAttribute="top" id="PO2-MH-k4s"/>
+                        <constraint firstAttribute="bottom" secondItem="tFD-bL-CNR" secondAttribute="bottom" id="cmQ-Xl-ztY"/>
+                        <constraint firstAttribute="trailing" secondItem="tFD-bL-CNR" secondAttribute="trailing" id="dzk-mh-rPU"/>
+                        <constraint firstItem="tFD-bL-CNR" firstAttribute="centerX" secondItem="UcM-nP-MHn" secondAttribute="centerX" id="lgC-Nk-0cS"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tFD-bL-CNR" firstAttribute="width" secondItem="4TP-EO-YYC" secondAttribute="width" id="H9K-dh-n49"/>
+                <constraint firstAttribute="bottom" secondItem="UcM-nP-MHn" secondAttribute="bottom" id="Kx0-ZF-XS0"/>
+                <constraint firstItem="tFD-bL-CNR" firstAttribute="height" secondItem="4TP-EO-YYC" secondAttribute="height" priority="750" id="j7L-mK-Ggf"/>
+                <constraint firstItem="UcM-nP-MHn" firstAttribute="leading" secondItem="4TP-EO-YYC" secondAttribute="leading" id="s1I-eB-qhU"/>
+                <constraint firstItem="UcM-nP-MHn" firstAttribute="trailing" secondItem="4TP-EO-YYC" secondAttribute="trailing" id="x8D-JN-RuL"/>
+                <constraint firstItem="UcM-nP-MHn" firstAttribute="top" secondItem="4TP-EO-YYC" secondAttribute="top" id="xhg-Ax-ldS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="18" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="32" height="32"/>
+        <image name="nav_btn_back" width="32" height="32"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

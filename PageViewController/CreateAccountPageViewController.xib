@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAccountPageViewController" customModule="PageViewController" customModuleProvider="target">
+            <connections>
+                <outlet property="imageLabelStackView" destination="4yp-2C-LEy" id="Qzp-uI-eds"/>
+                <outlet property="titleLabel" destination="yJq-yG-NBL" id="wrC-HJ-1CM"/>
+                <outlet property="view" destination="DvJ-6r-oTp" id="r4Y-uE-Fzk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DvJ-6r-oTp">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJq-yG-NBL">
+                    <rect key="frame" x="557" y="60" width="66.5" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="style" value="h1Blue"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yp-2C-LEy">
+                    <rect key="frame" x="36" y="93.5" width="1108" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="hj4-qs-YtK">
+                            <variation key="heightClass=regular-widthClass=regular" constant="280"/>
+                        </constraint>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="bb6-1U-Chi"/>
+            <constraints>
+                <constraint firstItem="4yp-2C-LEy" firstAttribute="centerX" secondItem="DvJ-6r-oTp" secondAttribute="centerX" id="BUW-fd-d5l"/>
+                <constraint firstItem="bb6-1U-Chi" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4yp-2C-LEy" secondAttribute="bottom" constant="8" id="F43-LB-5Vz"/>
+                <constraint firstItem="4yp-2C-LEy" firstAttribute="leading" secondItem="DvJ-6r-oTp" secondAttribute="leading" constant="8" id="Sve-CX-mHv">
+                    <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="4yp-2C-LEy" secondAttribute="trailing" constant="8" id="XSs-1a-7ki">
+                    <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                </constraint>
+                <constraint firstItem="4yp-2C-LEy" firstAttribute="top" secondItem="yJq-yG-NBL" secondAttribute="bottom" constant="16" id="gBx-c9-dXg">
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="yJq-yG-NBL" firstAttribute="top" secondItem="bb6-1U-Chi" secondAttribute="top" constant="8" id="x06-HV-OzD">
+                    <variation key="heightClass=regular-widthClass=regular" constant="36"/>
+                </constraint>
+                <constraint firstItem="yJq-yG-NBL" firstAttribute="centerX" secondItem="DvJ-6r-oTp" secondAttribute="centerX" id="zhA-TL-DMG"/>
+            </constraints>
+            <point key="canvasLocation" x="70" y="-458"/>
+        </view>
+    </objects>
+</document>
