@@ -30,7 +30,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     }
     private let source = "value_prop_popup"
     static let keyCreateAccountPopupShownDate = "keyCreateAccountPopupShownDate"
-    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .png
+    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .pdf
 
     @IBAction func closeOrBackButtonAction(_ sender: UIButton) {
         
@@ -38,23 +38,36 @@ class CreateAccountPopupViewController: ScrollFormViewController {
 
     @IBAction func createAccountButtonAction(_ sender: UIButton) {
         imageAssetType = .pdf
-        useSVGAssetsButton?.setTitleColor(UIColor.blue, for: .normal)
-        alreadyHaveAnAccountButton?.setTitleColor(UIColor.blue, for: .normal)
-        createAccountButton?.setTitleColor(UIColor.gray, for: .normal)
+        updateButtonsUI()
     }
 
     @IBAction func alreadyHaveAnAccountButtonAction(_ sender: UIButton) {
         imageAssetType = .png
-        useSVGAssetsButton?.setTitleColor(UIColor.blue, for: .normal)
-        createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
-        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
+        updateButtonsUI()
     }
     
     @IBAction func useSVGAssetsButtonAction(_ sender: UIButton) {
         imageAssetType = .svg
-        useSVGAssetsButton?.setTitleColor(UIColor.gray, for: .normal)
-        createAccountButton?.setTitleColor(UIColor.blue, for: .normal)
-        alreadyHaveAnAccountButton?.setTitleColor(UIColor.blue, for: .normal)
+        updateButtonsUI()
+    }
+    
+    func updateButtonsUI() {
+        var svgButtonColor = UIColor.blue
+        var pdfButtonColor = UIColor.blue
+        var pngButtonColor = UIColor.blue
+        
+        switch imageAssetType {
+        case .png:
+            pngButtonColor = UIColor.gray
+        case .pdf:
+            pdfButtonColor = UIColor.gray
+        case .svg:
+            svgButtonColor = UIColor.gray
+        }
+        
+        useSVGAssetsButton?.setTitleColor(svgButtonColor, for: .normal)
+        createAccountButton?.setTitleColor(pdfButtonColor, for: .normal)
+        alreadyHaveAnAccountButton?.setTitleColor(pngButtonColor, for: .normal)
     }
 
     override func viewDidLoad() {
@@ -81,7 +94,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
         useSVGAssetsButton?.setTitle("Use SVG Images", for: .normal)
         
-        alreadyHaveAnAccountButton?.setTitleColor(UIColor.gray, for: .normal)
+        updateButtonsUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
