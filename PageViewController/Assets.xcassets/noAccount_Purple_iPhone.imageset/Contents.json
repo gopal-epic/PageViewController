@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Boy On Books.png",
+      "filename" : "Green BG (Purple)@1x.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Boy On Books@2x.png",
+      "filename" : "Green BG (Purple)@2x.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Boy On Books@3x.png",
+      "filename" : "Green BG (Purple)@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }

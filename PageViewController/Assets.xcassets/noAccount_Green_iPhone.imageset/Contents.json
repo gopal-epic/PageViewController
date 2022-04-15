@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Family Art.png",
+      "filename" : "Green BG@1x.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Family Art@2x.png",
+      "filename" : "Green BG@2x.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Family Art@3x.png",
+      "filename" : "Green BG@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }

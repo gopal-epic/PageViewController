@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Girl Art.png",
+      "filename" : "Green BG (pink)@1x.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Girl Art@2x.png",
+      "filename" : "Green BG (pink)@2x.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Girl Art@3x.png",
+      "filename" : "Green BG (pink)@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }
