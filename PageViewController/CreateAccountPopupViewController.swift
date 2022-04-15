@@ -30,7 +30,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     }
     private let source = "value_prop_popup"
     static let keyCreateAccountPopupShownDate = "keyCreateAccountPopupShownDate"
-    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .pdf
+    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .png
 
     @IBAction func closeOrBackButtonAction(_ sender: UIButton) {
         
