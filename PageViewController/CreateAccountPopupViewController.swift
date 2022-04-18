@@ -30,7 +30,7 @@ class CreateAccountPopupViewController: ScrollFormViewController {
     }
     private let source = "value_prop_popup"
     static let keyCreateAccountPopupShownDate = "keyCreateAccountPopupShownDate"
-    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .png
+    var imageAssetType: CreateAccountPopupModel.ImageAssetType = .svg
 
     @IBAction func closeOrBackButtonAction(_ sender: UIButton) {
         
@@ -94,6 +94,8 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
         useSVGAssetsButton?.setTitle("Use SVG Images", for: .normal)
         
+        createAccountButton?.isHidden = true
+        alreadyHaveAnAccountButton?.isHidden = true
         updateButtonsUI()
     }
 
