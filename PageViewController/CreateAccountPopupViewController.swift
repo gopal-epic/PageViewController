@@ -94,6 +94,9 @@ class CreateAccountPopupViewController: ScrollFormViewController {
         alreadyHaveAnAccountButton?.setTitle("Use PNG Images", for: .normal)
         useSVGAssetsButton?.setTitle("Use SVG Images", for: .normal)
         
+        useSVGAssetsButton?.isHidden = true
+        createAccountButton?.isHidden = true
+        
         updateButtonsUI()
     }
 
